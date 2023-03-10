@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import MLPOffset from './MLPOffset';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () =>
+{
+	return (
+		<main>
+			<h1 className="mlp_title">MLP Toolbox</h1>
+			<div className="panels">
+				<div className="mlp_panel">
+					<h1>MLP Editor</h1>
+					<div className="mlp_offset_chain">
+						<MLPOffset initial={true} />
+						<MLPOffset initial={false} />
+					</div>
+				</div>
+				<div className="c_panel">
+					<h1>C Code</h1>
+					<div className="c_ptr_section">
+						<h2>MLP As Pointer</h2>
+						<p className="c_ptr">(int*)a(int*)a(int*)a(int*)a(int*)a(int*)a(int*)a(int*)a(int*)a(int*)a(int*)a(int*)a(int*)a</p>
+					</div>
+					<div className="c_deref_section">
+						<h2>Dereferencing MLP</h2>
+						<p className="c_deref"></p>
+					</div>
+				</div>
+			</div>
+		</main>
+	);
 }
 
 export default App;

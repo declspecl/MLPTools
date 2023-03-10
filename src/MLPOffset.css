@@ -1,0 +1,68 @@
+.mlp_offset
+{
+	width: fit-content;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	gap: 1rem;
+
+	font-size: 13pt;
+}
+
+.mlp_offset > input[type="text"]
+{
+	padding: 0.75rem 0.25rem;
+
+	font-family: "Source Code Pro", monospace;
+	text-align: center;
+	font-size: 13pt;
+
+	color: #f8f1d3;
+	background-color: #25252a;
+
+	border-radius: 0.15rem;
+}
+
+.mlp_offset > button
+{
+	padding: 0.5rem;
+
+	width: 150px;
+	
+	font-family: "Shin Go", sans-serif;
+	font-size: 13pt;
+
+	background-color: #f4eac1;
+
+	border: 1px solid #25252a;
+	border-radius: 0.25rem;
+}
+
+.mlp_offset > button:hover
+{
+	background-color: #f8f1d3;
+}
+
+.mlp_offset > select
+{
+    padding: 0 1rem;
+
+    width: 100px;
+
+    font-family: "Shin Go", sans-serif;
+    font-size: 12pt;
+
+    color: #E6ECE0;
+    background-color: #25252a;
+
+    border-radius: 0.15rem;
+}
+
+.mlp_offset_chain
+{
+    display: flex;
+    flex-direction: column;
+    
+}
