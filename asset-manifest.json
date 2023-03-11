@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/MLPTools/static/css/main.12997ae9.css",
+    "main.js": "/MLPTools/static/js/main.8b3f94d3.js",
+    "static/media/AOTFShinGoProRegular.woff": "/MLPTools/static/media/AOTFShinGoProRegular.a51605e72df44fa3e704.woff",
+    "index.html": "/MLPTools/index.html",
+    "main.12997ae9.css.map": "/MLPTools/static/css/main.12997ae9.css.map",
+    "main.8b3f94d3.js.map": "/MLPTools/static/js/main.8b3f94d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12997ae9.css",
+    "static/js/main.8b3f94d3.js"
+  ]
+}
