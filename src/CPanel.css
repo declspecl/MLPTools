@@ -80,33 +80,25 @@
 .mlp_graph_component
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    font-size: 2.5rem;
-
     border: 1px solid #C4C9DC;
-    border-radius: 0.5rem;
     color: #C4C9DC;
 }
 
 .mlp_graph_component :first-child
 {
-    padding: 2.25rem 1rem;
-    /* border-right: 1px solid #C4C9DC; */
+    padding: 1rem;
+    border-right: 1px solid #C4C9DC;
 
     color: #f8f1d3;
 }
 
 .mlp_graph_component :last-child
 {
-    padding: 2.25rem 1rem;
-
-    border-top: 3px solid #C4C9DC;
-    border-radius: 1rem;
-
-    font-size: 2.5rem;
+    padding: 1rem;
 
     color: #b5d0c9;
 }
@@ -115,4 +107,18 @@
 {
     font-size: 1.25rem;
     color: #C4C9DC;
+}
+
+@media only screen and (max-width: 650px)
+{
+    .mlp_graph_component
+    {
+        flex-direction: column;
+    }
+
+    .mlp_graph_component :first-child
+    {
+        border-right: 0px;
+        border-bottom: 1px solid #C4C9DC;
+    }
 }

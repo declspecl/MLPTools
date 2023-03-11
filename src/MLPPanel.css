@@ -4,7 +4,7 @@
 
 	display: flex;
 	flex-direction: column;
-	justify-content: space;
+	justify-content: center;
 	align-items: center;
 	gap: 1.5rem;
 
@@ -35,6 +35,8 @@
 	font-family: "Source Code Pro", monospace;
 	text-align: center;
 	font-size: 13pt;
+
+	word-wrap: break-word;
 
 	color: #f8f1d3;
 	background-color: #25252a;
@@ -91,6 +93,8 @@
 	text-align: center;
 	font-size: 13pt;
 
+	word-wrap: break-word;
+
 	color: #f8f1d3;
 	background-color: #25252a;
 
@@ -129,7 +133,20 @@
 
 .mlp_buttons
 {
+	width: 100%;
+
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	gap: 1rem;
+}
+
+@media only screen and (max-width: 450px)
+{
+	#mlp_initial > input[type="text"],
+	#mlp_initial > select,
+	#mlp_error
+	{
+		font-size: 0.85em;
+	}
 }

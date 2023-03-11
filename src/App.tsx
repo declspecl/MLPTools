@@ -169,13 +169,13 @@ class App extends React.Component<Props, State>
 			);
 		});
 
-		const type_regex = /(int32_t|int64_t|uint32_t|uint64_t|float|double|char|void)/;
-		const delimeter_regex = /(\*|=|;)/;
-		const number_regex = /(0x)[a-z0-9]+/;
-		const all_regex = /(int32_t|int64_t|uint32_t|uint64_t|float|double|char|void|\*|=|;)/;
+		const type_regex: RegExp = /(int32_t|int64_t|uint32_t|uint64_t|float|double|char|void)/;
+		const delimeter_regex: RegExp = /(\*|=|;)/;
+		const number_regex: RegExp = /(0x)[a-z0-9]+/;
+		const all_regex: RegExp = /(int32_t|int64_t|uint32_t|uint64_t|float|double|char|void|\*|=|;)/;
   
 		// Split the code string into an array of substrings using the regex pattern
-		const code_groups = this.state.cCode.split(all_regex);
+		const code_groups: Array<string> = this.state.cCode.split(all_regex);
 		
 		// Map over the array and wrap each matched substring in a <span> tag
 		const highlighted_code: Array<JSX.Element> = code_groups.map((substring, index) =>
@@ -203,13 +203,13 @@ class App extends React.Component<Props, State>
 		for (let i: number = 0; i < this.state.codeComponents.length; i++)
 		{
 			mlpGraph.push(
-				<>
-					<div className="mlp_graph_component" key={"graph_component" + i}>
+				<React.Fragment key={"mlp_graph_component" + i}>
+					<div className="mlp_graph_component">
 						<p className="mlp_variable_name">{this.state.codeComponents[i].variableName}</p>
 						<p className="mlp_variable_name">{this.state.codeComponents[i].value}</p>
 					</div>
 					{ (i < this.state.codeComponents.length - 1) ? <div className="mlp_graph_arrow">↑</div> : null}
-				</>
+				</React.Fragment>
 			)
 		};
 
@@ -252,7 +252,7 @@ class App extends React.Component<Props, State>
 									offsetValues: currentOffsetValues.slice(0, currentOffsetValues.length - 1)
 								});
 								this.forceUpdate(() => { this.updateCCode() });
-							}}>Delete offset</button>
+							}} style={(this.state.offsetValues.length > 0) ? { display: "block" } : { display: "none" }}>Delete offset</button>
 						</div>
 					</div>
 					<div className="c_panel">
